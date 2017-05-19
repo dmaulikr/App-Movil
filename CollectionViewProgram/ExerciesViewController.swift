@@ -23,11 +23,11 @@ class ExerciesViewController: UIViewController {
     
     
     @IBAction func pauseButton(_ sender: Any) {
-        
+        print("pause")
     }
     
     @IBAction func stopButton(_ sender: Any) {
-        
+        print("stop")
     }
     /*
     // MARK: - Navigation

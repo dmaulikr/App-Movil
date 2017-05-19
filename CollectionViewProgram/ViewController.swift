@@ -8,17 +8,33 @@
 
 import UIKit
 
-class ViewController: UICollectionViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let itemsPerRow: CGFloat = 2
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    var rutineTitle: String = "Yessy Rutine"
+    var categories: [String] = ["Cardio", "Legs", "Arms", "Body"]
+    
+    struct rutines {
+        var title: String
+        var exercise: [String]
+    }
+    
+    var defaultRutines: [rutines] = []
     
     //MARK:
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        defaultRutines.append(rutines(title: "Cardio Rutine", exercise: ["Running", "Strech"]))
+        defaultRutines.append(rutines(title: "Legs Rutine", exercise: ["Jumping Jacks", "Something"]))
+        defaultRutines.append(rutines(title: "Arms Rutine", exercise: ["Push up", "ex. #2"]))
+        defaultRutines.append(rutines(title: "Body Rutine", exercise: ["Plank", "Crunch"]))
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,68 +42,46 @@ class ViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: TableView Methods
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
     
-    override func collectionView(_ collectionView: UICollectionView,
+    //MARK: CollectionView Methods
+     func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
         return 4
     }
     
-    override func collectionView(_ collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell",for: indexPath)
-        cell.backgroundColor = UIColor.black
         
-        let label = cell.viewWithTag(100) as! UILabel
-        
-        if indexPath.row == 0 {
-            label.text = "Cardio"
-        } else if indexPath.row == 1 {
-            label.text = "Legs"
-        } else if indexPath.row == 2 {
-            label.text = "Arms"
-        } else if indexPath.row == 3 {
-            label.text = "Body"
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell",for: indexPath) as! CategoriesCollectionViewCell
+
         // Configure the cell
+        cell.categorieTitle.setTitle(categories[indexPath.item], for: .normal)
+        cell.categorieTitle.tag = indexPath.item
+        cell.categorieTitle.addTarget(self, action: #selector(didGoToRutines), for: .touchUpInside)
+        
+        
         return cell
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        if indexPath.row == 0 {
-            rutineTitle = "Cardio Rutine"
-        } else if indexPath.row == 1 {
-            rutineTitle = "Legs Rutine"
-        } else if indexPath.row == 2 {
-            rutineTitle = "Arms Rutine"
-        } else if indexPath.row == 3 {
-            rutineTitle = "Body Rutine"
-        }
-
+    func didGoToRutines(sender: UIButton){
+        self.performSegue(withIdentifier: "rutinesVC", sender: sender)
     }
+    
+    
     
     //MARK: Segue Method
     //This method is used to acces any variable that is in the RutinesTableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "rutinesVC" {
-            let rutinesVC = segue.destination as? RutinesTableViewController
             
-                rutinesVC?.rutineTitle = rutineTitle
-                rutinesVC?.viewDidLoad()
+            let sender = sender as! UIButton
+            let rutinesVC = segue.destination as! RutinesTableViewController
+            
+            rutinesVC.rutineTitle = defaultRutines[sender.tag].title
+            rutinesVC.exercise = defaultRutines[sender.tag].exercise
         }
-    }
-    
-   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let screenSize: CGRect = UIScreen.main.bounds
-        
-        // add the required height, if you want to fill the whole screen it should be 'screenSize.height / 2'
-        return CGSize(width: screenSize.width / 2, height: 100)
     }
 }
 

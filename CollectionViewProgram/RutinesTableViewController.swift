@@ -10,12 +10,13 @@ import UIKit
 
 class RutinesTableViewController: UITableViewController {
     
-    var rutineTitle:String = ""
+    @IBOutlet weak var navagationBar: UINavigationItem!
+    var rutineTitle: String = ""
+    var exercise: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(rutineTitle)
+        navagationBar.title = rutineTitle
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,7 +39,7 @@ class RutinesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return exercise.count
     }
 
     
@@ -48,13 +49,9 @@ class RutinesTableViewController: UITableViewController {
         
         let label = cell.viewWithTag(5) as! UILabel
         
-        label.text = rutineTitle
+        label.text = exercise[indexPath.row]
 
         return cell
-    }
-    
-    func sayHello(hello : String){
-        print("algo salio de aqui");
     }
     
 //    //MARK: Delegate Methods

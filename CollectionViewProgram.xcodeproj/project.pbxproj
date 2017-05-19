@@ -15,6 +15,7 @@
 		2EBB119E1E8735E0007DDDED /* CollectionViewProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB119D1E8735E0007DDDED /* CollectionViewProgramTests.swift */; };
 		2EBB11A91E8A14F7007DDDED /* RutinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB11A81E8A14F7007DDDED /* RutinesTableViewController.swift */; };
 		2EFF61AB1ECE750000F4A2BD /* ExerciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF61AA1ECE750000F4A2BD /* ExerciesViewController.swift */; };
+		2EFF61AD1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF61AC1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		2EBB119F1E8735E0007DDDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EBB11A81E8A14F7007DDDED /* RutinesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RutinesTableViewController.swift; sourceTree = "<group>"; };
 		2EFF61AA1ECE750000F4A2BD /* ExerciesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciesViewController.swift; sourceTree = "<group>"; };
+		2EFF61AC1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				2EBB11881E8735E0007DDDED /* AppDelegate.swift */,
 				2EBB118A1E8735E0007DDDED /* ViewController.swift */,
+				2EFF61AC1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift */,
 				2EBB11A81E8A14F7007DDDED /* RutinesTableViewController.swift */,
 				2EFF61AA1ECE750000F4A2BD /* ExerciesViewController.swift */,
 				2EBB118C1E8735E0007DDDED /* Main.storyboard */,
@@ -211,6 +214,7 @@
 				2EBB118B1E8735E0007DDDED /* ViewController.swift in Sources */,
 				2EFF61AB1ECE750000F4A2BD /* ExerciesViewController.swift in Sources */,
 				2EBB11891E8735E0007DDDED /* AppDelegate.swift in Sources */,
+				2EFF61AD1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
