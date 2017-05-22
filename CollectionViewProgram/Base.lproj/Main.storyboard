@@ -46,7 +46,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Rutines" id="SRJ-X5-zn8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cOz-uS-Z8a"/>
+                        <barButtonItem key="backBarButtonItem" title="    " id="0eQ-9K-KlX"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cOz-uS-Z8a">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="navagationBar" destination="SRJ-X5-zn8" id="MHD-Nw-HVc"/>
@@ -92,7 +95,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="xTB-ah-4uf" secondAttribute="trailing" constant="85" id="dZf-P3-Gzx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Exercise Time" id="tUH-EH-dDt"/>
+                    <navigationItem key="navigationItem" title="Select Exercise Time" id="tUH-EH-dDt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="6Fu-To-LSw"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLk-eI-vbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,9 +177,15 @@
         <scene sceneID="d4z-0v-Lbv">
             <objects>
                 <navigationController id="XRm-Tg-Z0q" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Leh-JP-lOi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Leh-JP-lOi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.51928055549999996" green="0.067309463220000004" blue="0.56486803760000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="bVy-zU-9h4" kind="relationship" relationship="rootViewController" id="OZc-Gn-GIy"/>
@@ -216,7 +227,7 @@
                                                 <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gq-1y-ZCI">
                                                     <rect key="frame" x="0.0" y="0.0" width="122" height="122"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.51928055546870888" green="0.067309463217809173" blue="0.56486803756476678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.082836840989999994" green="0.63500217370000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -239,7 +250,9 @@
                             <constraint firstAttribute="trailing" secondItem="Oh4-PW-6KY" secondAttribute="trailing" id="P5C-Ti-BG3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Categories" id="Erd-0t-fXR"/>
+                    <navigationItem key="navigationItem" title="Categories" id="Erd-0t-fXR">
+                        <barButtonItem key="backBarButtonItem" title="    " id="7P0-OS-1PM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Oh4-PW-6KY" id="pF4-Ln-HI8"/>
                     </connections>

@@ -355,6 +355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GWR2746W7V;
 				INFOPLIST_FILE = CollectionViewProgram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BoriPower.CollectionViewProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,6 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GWR2746W7V;
 				INFOPLIST_FILE = CollectionViewProgram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BoriPower.CollectionViewProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";

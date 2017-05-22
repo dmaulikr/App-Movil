@@ -26,6 +26,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let collectionViewLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        collectionViewLayout.minimumLineSpacing = 15
+//        collectionViewLayout.minimumInteritemSpacing = 13
+//        collectionViewLayout.itemSize = CGSize(width: UIScreen.main.bounds.width/2, height: UIScreen.main.bounds.height/2)
+        
+        
         defaultRutines.append(rutines(title: "Cardio Rutine", exercise: ["Running", "Strech"]))
         defaultRutines.append(rutines(title: "Legs Rutine", exercise: ["Jumping Jacks", "Something"]))
         defaultRutines.append(rutines(title: "Arms Rutine", exercise: ["Push up", "ex. #2"]))
