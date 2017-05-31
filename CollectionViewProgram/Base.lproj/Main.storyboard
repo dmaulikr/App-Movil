@@ -10,55 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rutines-->
-        <scene sceneID="mbv-fd-S10">
-            <objects>
-                <tableViewController id="tsv-K8-u9F" customClass="RutinesTableViewController" customModule="CollectionViewProgram" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zq2-mO-0aE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="rutineItem" id="Qda-X4-zXB">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qda-X4-zXB" id="u9Z-kL-1DY">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jis-x9-AUr">
-                                            <rect key="frame" x="8" y="0.0" width="334" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="jc2-68-Bcl" kind="show" id="X6y-ga-oiZ"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="tsv-K8-u9F" id="jPx-ND-BB0"/>
-                            <outlet property="delegate" destination="tsv-K8-u9F" id="yWR-Ew-Kq0"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Rutines" id="SRJ-X5-zn8">
-                        <barButtonItem key="backBarButtonItem" title="    " id="0eQ-9K-KlX"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cOz-uS-Z8a">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="navagationBar" destination="SRJ-X5-zn8" id="MHD-Nw-HVc"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fYb-yW-R5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="893.60000000000002" y="46.326836581709152"/>
-        </scene>
         <!--Select Exercise Time-->
         <scene sceneID="dqw-j9-UfD">
             <objects>
@@ -171,13 +122,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMS-GR-rlt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2448.8000000000002" y="46.326836581709152"/>
+            <point key="canvasLocation" x="1663" y="45"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d4z-0v-Lbv">
             <objects>
                 <navigationController id="XRm-Tg-Z0q" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Leh-JP-lOi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Leh-JP-lOi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -198,7 +149,7 @@
         <!--Categories-->
         <scene sceneID="oT3-Rg-veL">
             <objects>
-                <viewController id="bVy-zU-9h4" customClass="ViewController" customModule="CollectionViewProgram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bVy-zU-9h4" customClass="CategoriesViewController" customModule="CollectionViewProgram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0IS-Nm-4H5"/>
                         <viewControllerLayoutGuide type="bottom" id="NvU-DC-WYH"/>
@@ -231,12 +182,14 @@
                                                     <state key="normal" title="Button">
                                                         <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="lks-mb-5PI" kind="show" identifier="rutineVC" id="OUN-Cs-gAJ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
                                         <connections>
                                             <outlet property="categorieTitle" destination="5gq-1y-ZCI" id="99o-3U-5cl"/>
-                                            <segue destination="tsv-K8-u9F" kind="show" identifier="rutinesVC" id="cB0-k8-kT3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -252,6 +205,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Categories" id="Erd-0t-fXR">
                         <barButtonItem key="backBarButtonItem" title="    " id="7P0-OS-1PM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NHZ-33-hAn">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Oh4-PW-6KY" id="pF4-Ln-HI8"/>
@@ -260,6 +216,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mI9-mL-sQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="61.600000000000001" y="45.42728635682159"/>
+        </scene>
+        <!--Rutines-->
+        <scene sceneID="zGp-YO-uPA">
+            <objects>
+                <tableViewController id="lks-mb-5PI" customClass="RutineTableViewController" customModule="CollectionViewProgram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CIQ-m1-brA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="rutineItem" id="ffc-rN-MoG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ffc-rN-MoG" id="xS6-B7-XpV">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOB-Ba-evC">
+                                            <rect key="frame" x="8" y="0.0" width="334" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="YMb-It-i6F" kind="show" id="AfY-IE-wq1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lks-mb-5PI" id="0kP-AL-57F"/>
+                            <outlet property="delegate" destination="lks-mb-5PI" id="7u1-7u-Vm7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rutines" id="3aS-5f-U2a">
+                        <barButtonItem key="backBarButtonItem" title="  " id="kYL-dW-WK5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Go!" id="NB2-fR-caf">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="jc2-68-Bcl" kind="show" id="mh2-5Y-vVj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navigationBar" destination="3aS-5f-U2a" id="1yW-gM-xaG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Reg-Hp-O8J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.60000000000002" y="35.532233883058474"/>
+        </scene>
+        <!--Exercise-->
+        <scene sceneID="qdi-Uy-aDi">
+            <objects>
+                <viewController id="YMb-It-i6F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="61l-v5-FZo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Abg-w1-BXU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ukH-pm-9i0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Exercise" id="Cdj-px-Uer">
+                        <barButtonItem key="backBarButtonItem" title="  " id="Okb-Do-3Zq"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ca-e3-CjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="786"/>
         </scene>
     </scenes>
     <resources>

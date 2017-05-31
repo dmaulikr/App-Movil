@@ -8,15 +8,16 @@
 
 import UIKit
 
-class RutinesTableViewController: UITableViewController {
+class RutineTableViewController: UITableViewController {
     
-    @IBOutlet weak var navagationBar: UINavigationItem!
+    @IBOutlet weak var navigationBar: UINavigationItem!
     var rutineTitle: String = ""
     var exercise: [String] = []
+    var index: Int = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navagationBar.title = rutineTitle
+        navigationBar.title = rutineTitle
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

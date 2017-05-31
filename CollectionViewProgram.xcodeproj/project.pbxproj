@@ -13,7 +13,8 @@
 		2EBB11901E8735E0007DDDED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBB118F1E8735E0007DDDED /* Assets.xcassets */; };
 		2EBB11931E8735E0007DDDED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EBB11911E8735E0007DDDED /* LaunchScreen.storyboard */; };
 		2EBB119E1E8735E0007DDDED /* CollectionViewProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB119D1E8735E0007DDDED /* CollectionViewProgramTests.swift */; };
-		2EBB11A91E8A14F7007DDDED /* RutinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB11A81E8A14F7007DDDED /* RutinesTableViewController.swift */; };
+		2EBB11A91E8A14F7007DDDED /* RutineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB11A81E8A14F7007DDDED /* RutineTableViewController.swift */; };
+		2EFAFB111ED67D57001A5D2B /* exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAFB101ED67D57001A5D2B /* exercises.swift */; };
 		2EFF61AB1ECE750000F4A2BD /* ExerciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF61AA1ECE750000F4A2BD /* ExerciesViewController.swift */; };
 		2EFF61AD1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF61AC1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +40,8 @@
 		2EBB11991E8735E0007DDDED /* CollectionViewProgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewProgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBB119D1E8735E0007DDDED /* CollectionViewProgramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewProgramTests.swift; sourceTree = "<group>"; };
 		2EBB119F1E8735E0007DDDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EBB11A81E8A14F7007DDDED /* RutinesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RutinesTableViewController.swift; sourceTree = "<group>"; };
+		2EBB11A81E8A14F7007DDDED /* RutineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RutineTableViewController.swift; sourceTree = "<group>"; };
+		2EFAFB101ED67D57001A5D2B /* exercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exercises.swift; sourceTree = "<group>"; };
 		2EFF61AA1ECE750000F4A2BD /* ExerciesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciesViewController.swift; sourceTree = "<group>"; };
 		2EFF61AC1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,11 +88,12 @@
 				2EBB11881E8735E0007DDDED /* AppDelegate.swift */,
 				2EBB118A1E8735E0007DDDED /* ViewController.swift */,
 				2EFF61AC1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift */,
-				2EBB11A81E8A14F7007DDDED /* RutinesTableViewController.swift */,
+				2EBB11A81E8A14F7007DDDED /* RutineTableViewController.swift */,
 				2EFF61AA1ECE750000F4A2BD /* ExerciesViewController.swift */,
 				2EBB118C1E8735E0007DDDED /* Main.storyboard */,
 				2EBB118F1E8735E0007DDDED /* Assets.xcassets */,
 				2EBB11911E8735E0007DDDED /* LaunchScreen.storyboard */,
+				2EFAFB101ED67D57001A5D2B /* exercises.swift */,
 				2EBB11941E8735E0007DDDED /* Info.plist */,
 			);
 			path = CollectionViewProgram;
@@ -210,11 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EBB11A91E8A14F7007DDDED /* RutinesTableViewController.swift in Sources */,
+				2EBB11A91E8A14F7007DDDED /* RutineTableViewController.swift in Sources */,
 				2EBB118B1E8735E0007DDDED /* ViewController.swift in Sources */,
 				2EFF61AB1ECE750000F4A2BD /* ExerciesViewController.swift in Sources */,
 				2EBB11891E8735E0007DDDED /* AppDelegate.swift in Sources */,
 				2EFF61AD1ECF0A1900F4A2BD /* CategoriesCollectionViewCell.swift in Sources */,
+				2EFAFB111ED67D57001A5D2B /* exercises.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
