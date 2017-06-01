@@ -47,7 +47,9 @@ class ExerciesViewController: UIViewController {
     @IBAction func stopButton(_ sender: Any) {
         print("stop")
         
-        
+        timer.invalidate()
+        time = 0
+        label.text = "0"
         
     }
     

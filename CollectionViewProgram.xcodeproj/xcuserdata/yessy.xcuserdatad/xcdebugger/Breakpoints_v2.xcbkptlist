@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollectionViewProgram/ExerciesViewController.swift"
-            timestampString = "517973533.393614"
+            timestampString = "517974955.666306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "TimerAction()"
             landmarkType = "7">
          </BreakpointContent>
