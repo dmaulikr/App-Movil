@@ -17,7 +17,7 @@ class RutineViewController: UITableViewController {
         
         exercise.append(rutine(title: "Cardio Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise:["Spot Jogging", "Squat Jumps", "Jumping Jacks", "Burpees", "Cross Crawl"]))
         exercise.append(rutine(title: "Arm Rutine", image: #imageLiteral(resourceName: "armsRutine"), exercise: ["Plank Ups", "Inchworm", "Push Up", "Plank Taps", "Lateral Plank Walks", "Plank Jacks", "Burpee With Push Up"]))
-       // exercise.append(rutine(title: "Legs Rutine", ))
+        exercise.append(rutine(title: "Legs Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Reverse Lunges", "Squats", "Side Lunges", "Curtsy Lunges"]))
         
         
         
