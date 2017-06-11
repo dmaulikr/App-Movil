@@ -8,19 +8,21 @@
 
 import UIKit
 
-class RutineViewController: UITableViewController {
+class RutineViewController: UITableViewController,madeRutine {
     
     var exercise: [rutine] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        exercise.append(rutine(title: "Cardio Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise:["Spot Jogging", "Squat Jumps", "Jumping Jacks", "Burpees", "Cross Crawl"]))
+        exercise.append(rutine(title: "Cardio Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Spot Jogging", "Squat Jumps", "Jumping Jacks", "Burpees", "Cross Crawl"]))
         exercise.append(rutine(title: "Arm Rutine", image: #imageLiteral(resourceName: "armsRutine"), exercise: ["Plank Ups", "Inchworm", "Push Up", "Plank Taps", "Lateral Plank Walks", "Plank Jacks", "Burpee With Push Up"]))
         exercise.append(rutine(title: "Legs Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Reverse Lunges", "Squats", "Side Lunges", "Curtsy Lunges"]))
         
-        
-        
+        func madeRutine(rutines: rutine) {
+            print(rutines)
+            exercise.append(rutine(title: rutines.title, image: rutines.image, exercise: rutines.exercise))
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -53,19 +55,29 @@ class RutineViewController: UITableViewController {
         return cell
     }
     
+    func madeRutine(rutines: rutine) {
+        print(rutines)
+        exercise.append(rutine(title: rutines.title, image: rutines.image, exercise: rutines.exercise))
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow! as NSIndexPath
         
-        let destinationVC = segue.destination as! ExerciseViewController
+        if segue.identifier == "exVC"{
+        let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow! as NSIndexPath!
         
-        var array: rutine
-        
-        array = exercise[indexPath.row]
-        
-        destinationVC.exercise = array.exercise
-        
+            let destinationVC = segue.destination as! ExerciseViewController
+            
+            var array: rutine
+            
+            array = exercise[indexPath.row]
+            
+            destinationVC.exercise = array.exercise
+        } else if segue.identifier == "addVC" {
+            let addingVC = segue.destination as! AddViewController
+            addingVC.delegate = self
+        }
         
     }
-
+    
 }
 

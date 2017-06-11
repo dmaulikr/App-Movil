@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Wd-ff-tIc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Wd-ff-tIc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,7 +50,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="uJb-gX-VuR" kind="show" id="aFk-DN-rR8"/>
+                                    <segue destination="uJb-gX-VuR" kind="show" identifier="exVC" id="aFk-DN-rR8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,12 +63,138 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="hxH-rn-7P4"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ILO-e5-w80">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="QYQ-l3-NI7" kind="show" identifier="addVC" id="Hie-k6-mTY"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8w-HH-ESl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="484" y="156.97151424287858"/>
+        </scene>
+        <!--Add Rutine-->
+        <scene sceneID="PM1-r5-DGj">
+            <objects>
+                <viewController id="QYQ-l3-NI7" customClass="AddViewController" customModule="Zuet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fw6-s7-RtQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="QKJ-tz-4i9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M0B-ps-Eac">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="BLp-cJ-wg3">
+                                <rect key="frame" x="85" y="116" width="205" height="205"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BLp-cJ-wg3" secondAttribute="height" multiplier="1:1" id="dEw-la-Ty5"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vzg-xY-13L" appends="YES" id="nDG-Zn-bO7"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Rutine Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sT5-ke-IQ7">
+                                <rect key="frame" x="16" y="78" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b5r-V3-ztv">
+                                <rect key="frame" x="0.0" y="364.5" width="375" height="302.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="exCell" id="9hn-He-PKj">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9hn-He-PKj" id="W5l-ye-ZuM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31n-Mz-F3G">
+                                                    <rect key="frame" x="8" y="0.0" width="328" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" red="0.51928055549999996" green="0.067309463220000004" blue="0.56486803760000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="03X-UQ-6IF">
+                                <rect key="frame" x="16" y="329" width="343" height="27.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select exercises for your rutine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b4-zg-Sgr">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="27.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="lRM-dV-QPj"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9b4-zg-Sgr" firstAttribute="leading" secondItem="03X-UQ-6IF" secondAttribute="leading" id="GpJ-Zo-8Is"/>
+                                    <constraint firstItem="9b4-zg-Sgr" firstAttribute="top" secondItem="03X-UQ-6IF" secondAttribute="top" id="XqW-rp-hZb"/>
+                                    <constraint firstAttribute="trailing" secondItem="9b4-zg-Sgr" secondAttribute="trailing" id="mjc-Vt-8D4"/>
+                                    <constraint firstAttribute="bottom" secondItem="9b4-zg-Sgr" secondAttribute="bottom" id="sUI-wS-Egv"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="03X-UQ-6IF" firstAttribute="top" secondItem="BLp-cJ-wg3" secondAttribute="bottom" constant="8" id="2OM-gn-WFV"/>
+                            <constraint firstItem="b5r-V3-ztv" firstAttribute="top" secondItem="03X-UQ-6IF" secondAttribute="bottom" constant="8" id="40G-h7-y5m"/>
+                            <constraint firstItem="sT5-ke-IQ7" firstAttribute="leading" secondItem="M0B-ps-Eac" secondAttribute="leadingMargin" id="B6b-nv-juU"/>
+                            <constraint firstItem="sT5-ke-IQ7" firstAttribute="trailing" secondItem="M0B-ps-Eac" secondAttribute="trailingMargin" id="HW3-9G-z09"/>
+                            <constraint firstItem="QKJ-tz-4i9" firstAttribute="top" secondItem="b5r-V3-ztv" secondAttribute="bottom" id="M7F-87-ijM"/>
+                            <constraint firstItem="b5r-V3-ztv" firstAttribute="top" secondItem="03X-UQ-6IF" secondAttribute="bottom" constant="8" id="MKj-B5-J0s"/>
+                            <constraint firstItem="BLp-cJ-wg3" firstAttribute="top" secondItem="fw6-s7-RtQ" secondAttribute="bottom" constant="52" id="O3P-z6-9sv"/>
+                            <constraint firstItem="b5r-V3-ztv" firstAttribute="leading" secondItem="M0B-ps-Eac" secondAttribute="leading" id="POk-fN-Cvk"/>
+                            <constraint firstItem="BLp-cJ-wg3" firstAttribute="leading" secondItem="M0B-ps-Eac" secondAttribute="leadingMargin" constant="69" id="QwY-KZ-Kq9"/>
+                            <constraint firstItem="03X-UQ-6IF" firstAttribute="leading" secondItem="M0B-ps-Eac" secondAttribute="leadingMargin" id="aeJ-cI-BHa"/>
+                            <constraint firstItem="sT5-ke-IQ7" firstAttribute="top" secondItem="fw6-s7-RtQ" secondAttribute="bottom" constant="14" id="qx1-iN-eiI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BLp-cJ-wg3" secondAttribute="trailing" constant="69" id="sMo-Gt-gld"/>
+                            <constraint firstAttribute="trailing" secondItem="b5r-V3-ztv" secondAttribute="trailing" id="tRP-vy-nyR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="03X-UQ-6IF" secondAttribute="trailing" id="w3v-If-GNP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Rutine" id="wEI-JN-Fv2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HYC-l8-Fnl">
+                            <connections>
+                                <action selector="cancel:" destination="QYQ-l3-NI7" id="K7U-4K-oIG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="rGi-DS-Hgn">
+                            <connections>
+                                <action selector="done:" destination="QYQ-l3-NI7" id="crp-2F-aKJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="backBarButtonItem" destination="HYC-l8-Fnl" id="tH7-k5-GvD"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="rutinePhoto" destination="BLp-cJ-wg3" id="fNn-Vn-ItW"/>
+                        <outlet property="tableView" destination="b5r-V3-ztv" id="0FT-pt-jFV"/>
+                        <outlet property="titleTextField" destination="sT5-ke-IQ7" id="38j-BS-qr1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcR-hC-Boc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" id="Vzg-xY-13L">
+                    <connections>
+                        <action selector="openPhotos:" destination="QYQ-l3-NI7" id="Qjm-kl-oji"/>
+                        <outlet property="delegate" destination="BLp-cJ-wg3" id="zs2-Kg-m33"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="484" y="859.52023988005999"/>
         </scene>
         <!--Exercises-->
         <scene sceneID="DxL-gp-7iX">
@@ -202,6 +329,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="defaultPhoto" width="360" height="360"/>
         <image name="play" width="170" height="170"/>
         <image name="stop" width="170" height="170"/>
     </resources>

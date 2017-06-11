@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E148AB41EECFE0C00C3180E /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E148AB31EECFE0C00C3180E /* AddViewController.swift */; };
 		2E4E2C571EDF785600C445C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4E2C561EDF785600C445C2 /* AppDelegate.swift */; };
 		2E4E2C591EDF785600C445C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4E2C581EDF785600C445C2 /* ViewController.swift */; };
 		2E4E2C5C1EDF785600C445C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4E2C5A1EDF785600C445C2 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E148AB31EECFE0C00C3180E /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		2E4E2C531EDF785600C445C2 /* Zuet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zuet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4E2C561EDF785600C445C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E4E2C581EDF785600C445C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				2E4E2C561EDF785600C445C2 /* AppDelegate.swift */,
 				2E4E2C581EDF785600C445C2 /* ViewController.swift */,
+				2E148AB31EECFE0C00C3180E /* AddViewController.swift */,
 				2ED07DD11EDFA17E00730D01 /* ExerciseViewController.swift */,
 				2ED07DD51EDFC6F200730D01 /* ActivityViewController.swift */,
 				2ED07DD31EDFAB6900730D01 /* Rutines.swift */,
@@ -212,6 +215,7 @@
 			files = (
 				2E4E2C591EDF785600C445C2 /* ViewController.swift in Sources */,
 				2ED07DD41EDFAB6900730D01 /* Rutines.swift in Sources */,
+				2E148AB41EECFE0C00C3180E /* AddViewController.swift in Sources */,
 				2ED07DD21EDFA17E00730D01 /* ExerciseViewController.swift in Sources */,
 				2ED07DD61EDFC6F200730D01 /* ActivityViewController.swift in Sources */,
 				2E4E2C571EDF785600C445C2 /* AppDelegate.swift in Sources */,

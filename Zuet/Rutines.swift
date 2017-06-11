@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+struct activity {
+    var name: [String]
+    //var image: UIImage
+}
 struct rutine {
     var title: String
     var image: UIImage
