@@ -29,11 +29,15 @@ class AddViewController: UIViewController,UIImagePickerControllerDelegate, UINav
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        exercise.append(checkedExercise(move: "Brinca", isChecked: false))
-        exercise.append(checkedExercise(move: "Corre", isChecked: false))
-        exercise.append(checkedExercise(move: "Salta", isChecked: false))
-        exercise.append(checkedExercise(move: "Camina", isChecked: false))
-        
+        exercise.append(checkedExercise(move: "Reverse Lunges", isChecked: false))
+        exercise.append(checkedExercise(move: "Squats", isChecked: false))
+        exercise.append(checkedExercise(move: "Side Lunges", isChecked: false))
+        exercise.append(checkedExercise(move: "Plank Jacks", isChecked: false))
+        exercise.append(checkedExercise(move: "Push Up", isChecked: false))
+        exercise.append(checkedExercise(move: "Plank Taps", isChecked: false))
+        exercise.append(checkedExercise(move: "Cat and Cow", isChecked: false))
+        exercise.append(checkedExercise(move: "Rotating Triceps Kickback", isChecked: false))
+
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
