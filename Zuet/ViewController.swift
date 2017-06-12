@@ -16,8 +16,8 @@ class RutineViewController: UITableViewController,madeRutine {
         super.viewDidLoad()
         
         exercise.append(rutine(title: "Cardio Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Reverse Lunges", "Squats with Arms Overhead", "Bridges", "Plank with Shoulder Touches", "Mountain Climbers", "Burpees","Squat Jumps","Skier Jumps","Pilates 100","Downward Dog","Cat and Cow","Warrior II"]))
-        exercise.append(rutine(title: "Arm Rutine", image: #imageLiteral(resourceName: "armsRutine"), exercise: ["Standing V Raise", "Shoulder Press", "Rotating Triceps Kickback"]))
-        exercise.append(rutine(title: "Legs Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Reverse Lunges", "Squats", "Side Lunges", "Curtsy Lunges"]))
+        exercise.append(rutine(title: "Arm Rutine", image: #imageLiteral(resourceName: "armsRutine"), exercise: ["Standing V Raise", "Shoulder Press", "Rotating Triceps Kickback", "Plank Ups", "Push Up", "Triceps Dip", "Plank Taps", "Plank Jacks"]))
+        exercise.append(rutine(title: "Legs Rutine", image: #imageLiteral(resourceName: "Legs"), exercise: ["Reverse Lunges", "Squats", "Side Lunges", "Curtsy Lunges"]))
 
         // Do any additional setup after loading the view, typically from a nib.
     }

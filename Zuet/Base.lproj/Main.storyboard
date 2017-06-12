@@ -27,26 +27,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="381" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v8a-b9-QAt">
-                                            <rect key="frame" x="4" y="0.0" width="373" height="239.66666666666666"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5wg-n4-VPE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="180"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NC-Zh-hng">
-                                                    <rect key="frame" x="0.0" y="180" width="373" height="59.666666666666657"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NC-Zh-hng">
+                                            <rect key="frame" x="199" y="22" width="182" height="196"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5wg-n4-VPE">
+                                            <rect key="frame" x="11" y="30" width="180" height="180"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="5wg-n4-VPE" secondAttribute="height" multiplier="1:1" id="BsW-Gc-bM7"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="v8a-b9-QAt" firstAttribute="leading" secondItem="FM5-jx-rjT" secondAttribute="leading" constant="4" id="P7L-LT-9Pw"/>
-                                        <constraint firstAttribute="trailing" secondItem="v8a-b9-QAt" secondAttribute="trailing" constant="4" id="W7X-Vw-fjN"/>
-                                        <constraint firstAttribute="bottom" secondItem="v8a-b9-QAt" secondAttribute="bottom" id="gAn-pA-BLy"/>
-                                        <constraint firstItem="v8a-b9-QAt" firstAttribute="top" secondItem="FM5-jx-rjT" secondAttribute="top" id="tu4-FN-Pn8"/>
+                                        <constraint firstItem="3NC-Zh-hng" firstAttribute="leading" secondItem="5wg-n4-VPE" secondAttribute="trailing" constant="8" id="3od-Fs-tcb"/>
+                                        <constraint firstItem="5wg-n4-VPE" firstAttribute="top" secondItem="FM5-jx-rjT" secondAttribute="topMargin" constant="22" id="6cQ-aD-rSb"/>
+                                        <constraint firstAttribute="bottom" secondItem="3NC-Zh-hng" secondAttribute="bottom" constant="22" id="Niu-6B-FBC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5wg-n4-VPE" secondAttribute="bottom" constant="22" id="Qar-zo-mg9"/>
+                                        <constraint firstItem="3NC-Zh-hng" firstAttribute="leading" secondItem="5wg-n4-VPE" secondAttribute="trailing" constant="8" id="Yzq-Tf-XtE"/>
+                                        <constraint firstAttribute="trailing" secondItem="3NC-Zh-hng" secondAttribute="trailing" id="Zt2-GT-f75"/>
+                                        <constraint firstItem="5wg-n4-VPE" firstAttribute="leading" secondItem="FM5-jx-rjT" secondAttribute="leadingMargin" constant="3" id="e1K-7A-azt"/>
+                                        <constraint firstItem="3NC-Zh-hng" firstAttribute="top" secondItem="FM5-jx-rjT" secondAttribute="top" constant="22" id="mll-ob-WmA"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -71,7 +73,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8w-HH-ESl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="156.97151424287858"/>
+            <point key="canvasLocation" x="482.60869565217394" y="155.70652173913044"/>
         </scene>
         <!--Add Rutine-->
         <scene sceneID="PM1-r5-DGj">
@@ -209,7 +211,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ee0-9Y-AlY" id="HvT-HH-wjC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TD-vu-7dT">
@@ -267,7 +269,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Wi-ft-JNa">
-                                <rect key="frame" x="20" y="382.33333333333337" width="374" height="135"/>
+                                <rect key="frame" x="20" y="382.33333333333337" width="374" height="135.00000000000011"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="bpZ-FK-u7w"/>

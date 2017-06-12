@@ -91,9 +91,8 @@ class ActivityViewController: UIViewController {
     }
     
     @IBAction func startTimer(_ sender: Any) {
-        if playbtn.currentImage == #imageLiteral(resourceName: "play"){
+        if (playbtn.currentImage)! == #imageLiteral(resourceName: "play") {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ActivityViewController.TimerAction)), userInfo: nil, repeats: true)
-            
             start = true
             playbtn.setImage(UIImage(named: "pause.png"), for: .normal)
         } else {
