@@ -56,6 +56,13 @@ class ExerciseViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationVC =  segue.destination as! ActivityViewController
+        destinationVC.exercise = exercise
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

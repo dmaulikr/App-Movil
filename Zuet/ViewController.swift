@@ -15,8 +15,8 @@ class RutineViewController: UITableViewController,madeRutine {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        exercise.append(rutine(title: "Cardio Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Spot Jogging", "Squat Jumps", "Jumping Jacks", "Burpees", "Cross Crawl"]))
-        exercise.append(rutine(title: "Arm Rutine", image: #imageLiteral(resourceName: "armsRutine"), exercise: ["Plank Ups", "Inchworm", "Push Up", "Plank Taps", "Lateral Plank Walks", "Plank Jacks", "Burpee With Push Up"]))
+        exercise.append(rutine(title: "Cardio Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Reverse Lunges", "Squats with Arms Overhead", "Bridges", "Plank with Shoulder Touches", "Mountain Climbers", "Burpees","Squat Jumps","Skier Jumps","Pilates 100","Downward Dog","Cat and Cow","Warrior II"]))
+        exercise.append(rutine(title: "Arm Rutine", image: #imageLiteral(resourceName: "armsRutine"), exercise: ["STANDING V RAISE", "SHOULDER PRESS", "ROTATING TRICEPS KICKBACK"]))
         exercise.append(rutine(title: "Legs Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Reverse Lunges", "Squats", "Side Lunges", "Curtsy Lunges"]))
         
         func madeRutine(rutines: rutine) {
