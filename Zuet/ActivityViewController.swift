@@ -24,7 +24,9 @@ class ActivityViewController: UIViewController {
     var element = 1
     var count = 0
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var playbtn: UIButton!
+    @IBOutlet weak var stopBtn: UIButton!
+    @IBOutlet weak var navBar: UINavigationItem!
     override func viewDidLoad() {
         
         //descriptions
@@ -69,14 +71,10 @@ class ActivityViewController: UIViewController {
         //exercisePicture["Mountain Climbers"] = #imageLiteral(resourceName: "armsRutine")
         
         
-        
-        
-        
-        
         super.viewDidLoad()
         print("from the activity view controller")
         print(exercise)
-        titleLabel.text = exercise[0]
+        navBar.title = exercise[0]
         count = exercise.count
         descriptionLabel.text = exerciseDescription[exercise[0]]
         imageView.image = exercisePicture[exercise[0]] as? UIImage
@@ -93,9 +91,15 @@ class ActivityViewController: UIViewController {
     }
     
     @IBAction func startTimer(_ sender: Any) {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ActivityViewController.TimerAction)), userInfo: nil, repeats: true)
-        
-        start = true
+        if playbtn.currentImage == #imageLiteral(resourceName: "play"){
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ActivityViewController.TimerAction)), userInfo: nil, repeats: true)
+            
+            start = true
+            playbtn.setImage(UIImage(named: "pause.png"), for: .normal)
+        } else {
+            timer.invalidate()
+            playbtn.setImage(UIImage(named: "play.png"), for: .normal)
+        }
         
     }
     
@@ -109,7 +113,7 @@ class ActivityViewController: UIViewController {
             {
                 
                 print("entro al if de presentar")
-                titleLabel.text = exercise[element]
+                navBar.title = exercise[element]
                 descriptionLabel.text = exerciseDescription[exercise[element]]
                 imageView.image = exercisePicture[exercise[element]] as? UIImage
                 element += 1
@@ -139,9 +143,9 @@ class ActivityViewController: UIViewController {
         time = 0
         timerLabel.text = "0"
         element = 1
-        titleLabel.text = exercise[0]
+        navBar.title = exercise[0]
         start = false
-        titleLabel.text = exercise[0]
+        navBar.title = exercise[0]
         descriptionLabel.text = exerciseDescription[exercise[0]]
         imageView.image = exercisePicture[exercise[0]] as? UIImage
         

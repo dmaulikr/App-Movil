@@ -16,13 +16,9 @@ class RutineViewController: UITableViewController,madeRutine {
         super.viewDidLoad()
         
         exercise.append(rutine(title: "Cardio Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Reverse Lunges", "Squats with Arms Overhead", "Bridges", "Plank with Shoulder Touches", "Mountain Climbers", "Burpees","Squat Jumps","Skier Jumps","Pilates 100","Downward Dog","Cat and Cow","Warrior II"]))
-        exercise.append(rutine(title: "Arm Rutine", image: #imageLiteral(resourceName: "armsRutine"), exercise: ["STANDING V RAISE", "SHOULDER PRESS", "ROTATING TRICEPS KICKBACK"]))
+        exercise.append(rutine(title: "Arm Rutine", image: #imageLiteral(resourceName: "armsRutine"), exercise: ["Standing V Raise", "Shoulder Press", "Rotating Triceps Kickback"]))
         exercise.append(rutine(title: "Legs Rutine", image: #imageLiteral(resourceName: "cardioRutine"), exercise: ["Reverse Lunges", "Squats", "Side Lunges", "Curtsy Lunges"]))
-        
-        func madeRutine(rutines: rutine) {
-            print(rutines)
-            exercise.append(rutine(title: rutines.title, image: rutines.image, exercise: rutines.exercise))
-        }
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -58,6 +54,9 @@ class RutineViewController: UITableViewController,madeRutine {
     func madeRutine(rutines: rutine) {
         print(rutines)
         exercise.append(rutine(title: rutines.title, image: rutines.image, exercise: rutines.exercise))
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: exercise.count-1, section: 0)], with: .automatic)
+        tableView.endUpdates()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
