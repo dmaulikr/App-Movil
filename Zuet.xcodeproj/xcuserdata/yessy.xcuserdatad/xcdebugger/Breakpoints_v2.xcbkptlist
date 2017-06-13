@@ -22,31 +22,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Zuet.ActivityViewController.timerLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  symbolName = "Zuet.ActivityViewController.exerciseDescription.getter : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
                   moduleName = "Zuet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yessy/Documents/App-Movil/Zuet/ActivityViewController.swift"
-                  timestampString = "518914234.249644"
+                  timestampString = "518977888.680265"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "27">
+                  offsetFromSymbolStart = "35">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Zuet.ActivityViewController.timerLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  symbolName = "Zuet.ActivityViewController.exerciseDescription.setter : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
                   moduleName = "Zuet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yessy/Documents/App-Movil/Zuet/ActivityViewController.swift"
-                  timestampString = "518914234.253956"
+                  timestampString = "518977888.684225"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "42">
+                  offsetFromSymbolStart = "61">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -56,7 +56,7 @@
                   moduleName = "Zuet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yessy/Documents/App-Movil/Zuet/ActivityViewController.swift"
-                  timestampString = "518914234.256592"
+                  timestampString = "518977888.687104"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -71,12 +71,12 @@
                   moduleName = "Zuet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yessy/Documents/App-Movil/Zuet/ActivityViewController.swift"
-                  timestampString = "518914234.258245"
+                  timestampString = "518977888.689879"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "31">
+                  offsetFromSymbolStart = "33">
                </Location>
             </Locations>
          </BreakpointContent>

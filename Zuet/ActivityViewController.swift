@@ -29,7 +29,7 @@ class ActivityViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationItem!
     override func viewDidLoad() {
         
-        //descriptions
+        //descriptions for exercises
         exerciseDescription["Reverse Lunges"] =  "Take a big step back with your left foot. Bend both knees to lower into a lunge, making sure your right knee is above the ankle and does not go too far beyond your toes. Drive off the ball of your right big toe to return to standing. Repeat, this time stepping back with your right leg. That's one rep. Do 10 reps total, keeping your chest up the whole time."
         exerciseDescription["Squats with Arms Overhead"] =  "Stand with feet hip-width apart and arms up, palms facing each other. Bend both knees and shift your hips back as though you are sitting in a chair. Draw shoulder blades down and back. Use your glutes to return to standing. That's one rep. Do 10 reps total."
         exerciseDescription["Bridges"] =  "Lie faceup on the floor (mat optional) with your feet directly below your knees. Keep your hands by your sides and engage your glutes to lift your hips off the ground. Slowly lower back to the floor. Keep your neck and back relaxed as you use your glutes and hamstrings to lift up and down 10 times total."
@@ -51,7 +51,7 @@ class ActivityViewController: UIViewController {
         
         
         
-        //pictures 
+        //pictures for exercises
         exercisePicture["Reverse Lunges"] = #imageLiteral(resourceName: "reverseLunges")
         exercisePicture["Squats with Arms Overhead"] = #imageLiteral(resourceName: "SquatsArms")
         exercisePicture["Bridges"] = #imageLiteral(resourceName: "bridges")
@@ -82,7 +82,7 @@ class ActivityViewController: UIViewController {
         
 
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {

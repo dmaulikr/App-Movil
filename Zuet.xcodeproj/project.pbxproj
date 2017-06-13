@@ -158,7 +158,7 @@
 				TargetAttributes = {
 					2E4E2C521EDF785600C445C2 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = GWR2746W7V;
+						DevelopmentTeam = L5K9XYEYSB;
 						ProvisioningStyle = Automatic;
 					};
 					2E4E2C661EDF785600C445C2 = {
@@ -359,11 +359,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GWR2746W7V;
+				DEVELOPMENT_TEAM = L5K9XYEYSB;
 				INFOPLIST_FILE = Zuet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.BoriPower.Zuet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.workout.Zuet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -374,11 +374,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GWR2746W7V;
+				DEVELOPMENT_TEAM = L5K9XYEYSB;
 				INFOPLIST_FILE = Zuet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.BoriPower.Zuet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.workout.Zuet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
