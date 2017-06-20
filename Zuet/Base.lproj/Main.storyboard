@@ -263,13 +263,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ku-no-IYd">
-                                <rect key="frame" x="60" y="146.99999999999997" width="279" height="227.33333333333329"/>
+                                <rect key="frame" x="60" y="147" width="279" height="227"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0ku-no-IYd" secondAttribute="height" multiplier="193:157" id="pDB-0g-KMC"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Wi-ft-JNa">
-                                <rect key="frame" x="20" y="382.33333333333337" width="374" height="135.00000000000011"/>
+                                <rect key="frame" x="20" y="382" width="374" height="135"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="bpZ-FK-u7w"/>
@@ -281,23 +281,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5R7-Ml-KmY">
                                 <rect key="frame" x="39" y="641" width="75" height="75"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5X-UF-mLy">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="0zB-ud-CDA">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="jAN-Oe-kCX"/>
-                                            <constraint firstAttribute="width" constant="75" id="vwv-To-XTo"/>
+                                            <constraint firstAttribute="width" secondItem="0zB-ud-CDA" secondAttribute="height" multiplier="1:1" id="Bf9-tg-VQ4"/>
                                         </constraints>
-                                        <state key="normal" image="play"/>
                                         <connections>
-                                            <action selector="startTimer:" destination="bYs-9d-vlF" eventType="touchUpInside" id="c1R-vE-ZYU"/>
+                                            <outletCollection property="gestureRecognizers" destination="r1u-SO-EPA" appends="YES" id="7Fo-1x-dZK"/>
                                         </connections>
-                                    </button>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="n5X-UF-mLy" firstAttribute="leading" secondItem="5R7-Ml-KmY" secondAttribute="leading" id="a1L-jw-r2u"/>
-                                    <constraint firstAttribute="bottom" secondItem="n5X-UF-mLy" secondAttribute="bottom" id="lDA-gS-Ran"/>
-                                    <constraint firstItem="n5X-UF-mLy" firstAttribute="top" secondItem="5R7-Ml-KmY" secondAttribute="top" id="vM0-cV-PBK"/>
-                                    <constraint firstAttribute="trailing" secondItem="n5X-UF-mLy" secondAttribute="trailing" id="yqe-L9-TYZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0zB-ud-CDA" secondAttribute="trailing" id="5Ib-ec-OAv"/>
+                                    <constraint firstItem="0zB-ud-CDA" firstAttribute="leading" secondItem="5R7-Ml-KmY" secondAttribute="leading" id="97Z-U8-aNw"/>
+                                    <constraint firstItem="0zB-ud-CDA" firstAttribute="top" secondItem="5R7-Ml-KmY" secondAttribute="top" id="TLA-ir-iHP"/>
+                                    <constraint firstAttribute="bottom" secondItem="0zB-ud-CDA" secondAttribute="bottom" id="YIi-1n-f2n"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MRt-di-UXG">
@@ -329,6 +328,7 @@
                             <constraint firstItem="1aL-8S-Apc" firstAttribute="centerX" secondItem="0ku-no-IYd" secondAttribute="centerX" id="7mw-Oe-MW4"/>
                             <constraint firstItem="1aL-8S-Apc" firstAttribute="top" secondItem="cKF-nI-fkt" secondAttribute="bottom" id="BYe-BW-VHD"/>
                             <constraint firstItem="0ku-no-IYd" firstAttribute="top" secondItem="1aL-8S-Apc" secondAttribute="bottom" constant="39" id="EPn-tl-vvk"/>
+                            <constraint firstItem="5R7-Ml-KmY" firstAttribute="bottom" secondItem="MRt-di-UXG" secondAttribute="bottom" id="GFl-hk-u8q"/>
                             <constraint firstItem="1aL-8S-Apc" firstAttribute="leading" secondItem="1nI-Xa-1Mu" secondAttribute="leadingMargin" id="IPk-V3-pQL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0ku-no-IYd" secondAttribute="trailing" constant="55" id="JtV-lx-2pK"/>
                             <constraint firstAttribute="bottom" secondItem="MRt-di-UXG" secondAttribute="bottom" constant="20" symbolic="YES" id="KZ4-iE-GUJ"/>
@@ -353,12 +353,19 @@
                         <outlet property="descriptionLabel" destination="0Wi-ft-JNa" id="C8G-W1-gY7"/>
                         <outlet property="imageView" destination="0ku-no-IYd" id="NGZ-Hh-q0T"/>
                         <outlet property="navBar" destination="TDL-8b-ykm" id="aag-dJ-kjg"/>
+                        <outlet property="playBtn" destination="0zB-ud-CDA" id="epu-1O-yqn"/>
                         <outlet property="timerLabel" destination="1aL-8S-Apc" id="GYQ-S5-0wk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tn-Q9-sYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="r1u-SO-EPA">
+                    <connections>
+                        <action selector="startTimer:" destination="bYs-9d-vlF" id="4ah-9K-52M"/>
+                        <outlet property="delegate" destination="0zB-ud-CDA" id="GX8-PJ-2TI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2015.625" y="152.11267605633802"/>
+            <point key="canvasLocation" x="2014.4927536231885" y="151.63043478260872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rhw-pX-bg6">

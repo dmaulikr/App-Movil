@@ -24,7 +24,8 @@ class ActivityViewController: UIViewController {
     var element = 1
     var count = 0
     
-    @IBOutlet weak var playbtn: UIButton!
+    
+    @IBOutlet weak var playBtn: UIImageView!
     @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var navBar: UINavigationItem!
     override func viewDidLoad() {
@@ -90,18 +91,18 @@ class ActivityViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func startTimer(_ sender: Any) {
-        if (playbtn.currentImage)! == #imageLiteral(resourceName: "play") {
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ActivityViewController.TimerAction)), userInfo: nil, repeats: true)
-            start = true
-            playbtn.setImage(UIImage(named: "pause.png"), for: .normal)
+    @IBAction func startTimer(_ sender: UITapGestureRecognizer) {
+        if playBtn.image == #imageLiteral(resourceName: "play") {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ActivityViewController.TimerAction)), userInfo: nil, repeats: true)
+        start = true
+            playBtn.image = #imageLiteral(resourceName: "pause")
         } else {
             timer.invalidate()
-            playbtn.setImage(UIImage(named: "play.png"), for: .normal)
+          playBtn.image = #imageLiteral(resourceName: "play")
         }
-        
+
     }
-    
+
     @IBAction func nextButton(_ sender: Any) {
         
         print("next")
